@@ -1,0 +1,333 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-card {
+    background: rgba(30, 27, 75, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.portal-icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.auth-header h2 {
+    font-size: 22px;
+    color: #f8fafc;
+    font-weight: 700;
+}
+
+.auth-header p {
+    font-size: 13px;
+    color: #cbd5e1;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+.auth-tabs {
+    display: flex;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.auth-tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.auth-tab-btn.active {
+    background: #f43f5e;
+    color: white;
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin-bottom: 6px;
+}
+
+.auth-input {
+    width: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 11px 14px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.auth-input:focus {
+    border-color: #f43f5e;
+}
+
+.auth-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #f43f5e, #e11d48);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+    margin-top: 5px;
+}
+
+.auth-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.main-dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.teacher-header {
+    background: rgba(30, 27, 75, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    font-size: 26px;
+}
+
+.header-brand h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.logout-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+}
+
+.dashboard-content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+}
+
+.teacher-actions-toggle-card {
+    background: rgba(30, 27, 75, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.teacher-actions-toggle-card:hover {
+    background: rgba(49, 43, 110, 0.8);
+}
+
+.toggle-card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 4px;
+}
+
+.teacher-actions-toggle-card p {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.grade-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.grade-card {
+    background: rgba(30, 27, 75, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 4px solid #3b82f6;
+    border-radius: 14px;
+    padding: 22px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grade-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.grade-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 6px;
+}
+
+.grade-card p {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.card-action {
+    font-size: 13px;
+    font-weight: 600;
+    color: #f43f5e;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.data-table {
+    width: 100% !important;
+    max-width: none !important;
+    border-collapse: collapse;
+    background: rgba(30, 27, 75, 0.8);
+    backdrop-filter: blur(10px);
+    table-layout: auto;
+    text-align: left;
+    font-size: 13px;
+}
+
+.data-table th, .data-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-table th {
+    background: rgba(30, 27, 75, 0.9);
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+.data-table tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: #1e1b4b;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 15px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
